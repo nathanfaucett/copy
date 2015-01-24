@@ -1,0 +1,27 @@
+{
+  "name": "copy",
+  "version": "0.0.1",
+  "description": "copy for the browser and node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanfaucett/copy.git"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "copy",
+    "copy.js"
+  ],
+  "author": "Nathan Faucett",
+  "license": "BSD-2-Clause",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jsbeautifier": "^0.2.7",
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "extend": "nathanfaucett/extend",
+    "is_array_like": "nathanfaucett/is_array_like"
+  }
+}
