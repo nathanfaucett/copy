@@ -2,6 +2,13 @@ var extend = require("extend"),
     isArrayLike = require("is_array_like");
 
 
+module.exports = copy;
+
+
+function copy(object) {
+    return isArrayLike(object) ? copyArray(object) : extend({}, Object(object));
+}
+
 function copyArray(array) {
     var length = array.length,
         i = -1,
@@ -14,7 +21,3 @@ function copyArray(array) {
 
     return results;
 }
-
-module.exports = function copy(object) {
-    return isArrayLike(object) ? copyArray(object) : extend({}, Object(object));
-};
