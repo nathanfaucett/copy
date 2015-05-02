@@ -6,7 +6,7 @@ module.exports = copy;
 
 
 function copy(object) {
-    return isArrayLike(object) ? copyArray(object) : extend({}, Object(object));
+    return isArrayLike(object) ? (object.slice ? object.slice() : copyArray(object)) : extend({}, Object(object));
 }
 
 function copyArray(array) {
