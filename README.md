@@ -1,4 +1,4 @@
-copy
+copy [![Build Status](https://travis-ci.org/nathanfaucett/copy.svg?branch=master)](https://travis-ci.org/nathanfaucett/copy)
 =======
 
-copy for the browser and node.js
+copy scheduler for the browser and node.js

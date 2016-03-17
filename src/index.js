@@ -1,23 +1,26 @@
 var extend = require("extend"),
+    isFunction = require("is_function"),
+    arrayCopy = require("array_copy"),
+    isObject = require("is_object"),
     isArrayLike = require("is_array_like");
 
 
 module.exports = copy;
 
 
-function copy(object) {
-    return isArrayLike(object) ? (object.slice ? object.slice() : copyArray(object)) : extend({}, Object(object));
-}
+function copy(value) {
+    var length;
 
-function copyArray(array) {
-    var length = array.length,
-        i = -1,
-        il = length - 1,
-        results = new Array(length);
-
-    while (i++ < il) {
-        results[i] = array[i];
+    if (isArrayLike(value)) {
+        if (isFunction(value.slice)) {
+            return value.slice();
+        } else {
+            length = value.length;
+            return arrayCopy(value, 0, new Array(length), 0, length);
+        }
+    } else if (isObject(value)) {
+        return extend({}, value);
+    } else {
+        return value;
     }
-
-    return results;
 }
