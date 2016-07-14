@@ -1,8 +1,8 @@
-var extend = require("extend"),
-    isFunction = require("is_function"),
-    arrayCopy = require("array_copy"),
-    isObject = require("is_object"),
-    isArrayLike = require("is_array_like");
+var extend = require("@nathanfaucett/extend"),
+    isFunction = require("@nathanfaucett/is_function"),
+    arrayCopy = require("@nathanfaucett/array_copy"),
+    isObject = require("@nathanfaucett/is_object"),
+    isArrayLike = require("@nathanfaucett/is_array_like");
 
 
 module.exports = copy;
